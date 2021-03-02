@@ -31,7 +31,10 @@ const getButton = (id, type) => {
 const markElements = (markedComments) => {
     if (markedComments) {
         markedComments.forEach(({ id, type }) => {
-            document.querySelector(`#${id}`).style.backgroundColor = colors[type];
+            const el = document.querySelector(`#${id}`);
+            if (el) {
+                el.style.backgroundColor = colors[type];
+            }
         })
     }
 }

@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+  
+    "name": "GitHub comments marker",
+    "description": "Mark PR comments as you fix them",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "browser_action": {
+     "default_icon": "icon.png",
+     "default_popup": "popup.html"
+    },
+    "permissions": [
+     "activeTab",
+     "storage",
+     "declarativeContent"
+     ]
+  }
